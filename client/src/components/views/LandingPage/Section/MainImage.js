@@ -24,4 +24,5 @@ function MainImage(props) {
         </div>
     )
 }
+
 export default MainImage
