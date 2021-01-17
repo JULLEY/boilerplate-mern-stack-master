@@ -10,7 +10,7 @@ function FavoritePage() {
 
     useEffect(() => {
 
-        fetchFavoredMovie()
+        fetchFavoredMovie();
        
     }, [])
 
