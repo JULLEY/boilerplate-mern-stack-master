@@ -3,6 +3,7 @@ import { API_URL, API_KEY, IMAGE_BASE_URL } from '../../Config'
 import MainImage from './../LandingPage/Section/MainImage';
 import MovieInfo from './Section/MovieInfo';
 import GridCards from './../commons/GridCards';
+import Favorite from './Section/Favorite';
 import { Row } from "antd";
 
 function MovieDetail(props) {
@@ -48,6 +49,11 @@ function MovieDetail(props) {
 
         {/* Body */}
         <div style={{ width: "85%", margin: "1rem auto" }}>
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            {/* Favorite.js에 보내줄 props들을 선언한다. */}
+            <Favorite movieInfo={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')} /> 
+          </div>
+
           {/* Movie Info */}
           <MovieInfo movie={Movie} />
 
